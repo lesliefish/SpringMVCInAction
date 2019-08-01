@@ -11,7 +11,7 @@ public class TextAreaUserController {
 
     @RequestMapping(value = "/textAreaUser", method = RequestMethod.GET)
     public ModelAndView user() {
-        return new ModelAndView("fortag_textarea_user", "command", new User());
+        return new ModelAndView("formtag_textarea_user", "command", new User());
     }
 
     @RequestMapping(value = "/addTextAreaUser", method = RequestMethod.POST)

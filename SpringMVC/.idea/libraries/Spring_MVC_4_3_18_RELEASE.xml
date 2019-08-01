@@ -6,6 +6,8 @@
       <root url="jar://$PROJECT_DIR$/lib/spring-websocket-4.3.18.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/spring-webmvc-4.3.18.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/spring-web-4.3.18.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jsp-api-2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javax.servlet-api-3.1.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

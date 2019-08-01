@@ -12,6 +12,8 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
+    <bean id = "studentValidator" class = "com.lesliefish.formtag.errors.StudentValidator" />
+
     <mvc:resources mapping="/pages/**" location="/WEB-INF/pages/"></mvc:resources>
     <mvc:annotation-driven></mvc:annotation-driven>
 </beans>

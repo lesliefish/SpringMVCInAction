@@ -18,4 +18,12 @@
     <mvc:annotation-driven></mvc:annotation-driven>
 
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
+
+
+    <!-- controller继承方式 bean名称url匹配 start -->
+
+    <bean class="com.lesliefish.handlermapping.BeanNameUrlController" name="/hello.htm"></bean>
+    <bean class="com.lesliefish.handlermapping.BeanNameUrlWelcomeController" name="/welcome"></bean>
+
+    <!-- controller继承方式 bean名称url匹配 end -->
 </beans>

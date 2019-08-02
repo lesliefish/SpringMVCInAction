@@ -5,14 +5,14 @@
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <context:component-scan base-package="com.lesliefish.*" />
+    <context:component-scan base-package="com.lesliefish.*"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/jsp/" />
-        <property name="suffix" value=".jsp" />
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
     </bean>
 
-    <bean id = "studentValidator" class = "com.lesliefish.formtag.errors.StudentValidator" />
+    <bean id="studentValidator" class="com.lesliefish.formtag.errors.StudentValidator"/>
 
     <mvc:resources mapping="/pages/**" location="/WEB-INF/pages/"></mvc:resources>
     <mvc:annotation-driven></mvc:annotation-driven>
@@ -26,8 +26,19 @@
     <!-- controller继承方式 bean名称url匹配 end -->
 
     <!-- controller 类名称url匹配 start -->
-    <bean class = "org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
     <bean class="com.lesliefish.handlermapping.ControllerClassNameController"></bean>
     <bean class="com.lesliefish.handlermapping.ControllerClassNameWelcomeController"></bean>
     <!-- controller 类名称url匹配 end -->
+
+    <!-- controller SimpleUrlHandlerMapping -->
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/simpleurlWelcome.htm">simpleUrlController</prop>
+            </props>
+        </property>
+    </bean>
+    <bean class="com.lesliefish.handlermapping.SimpleUrlController" id="simpleUrlController"></bean>
+    <!-- controller SimpleUrlHandlerMapping -->
 </beans>

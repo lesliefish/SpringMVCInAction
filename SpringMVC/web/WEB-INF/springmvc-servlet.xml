@@ -21,9 +21,13 @@
 
 
     <!-- controller继承方式 bean名称url匹配 start -->
-
     <bean class="com.lesliefish.handlermapping.BeanNameUrlController" name="/hello.htm"></bean>
     <bean class="com.lesliefish.handlermapping.BeanNameUrlWelcomeController" name="/welcome"></bean>
-
     <!-- controller继承方式 bean名称url匹配 end -->
+
+    <!-- controller 类名称url匹配 start -->
+    <bean class = "org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+    <bean class="com.lesliefish.handlermapping.ControllerClassNameController"></bean>
+    <bean class="com.lesliefish.handlermapping.ControllerClassNameWelcomeController"></bean>
+    <!-- controller 类名称url匹配 end -->
 </beans>

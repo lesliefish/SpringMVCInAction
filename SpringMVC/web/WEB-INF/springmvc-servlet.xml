@@ -41,4 +41,11 @@
     </bean>
     <bean class="com.lesliefish.handlermapping.SimpleUrlController" id="simpleUrlController"></bean>
     <!-- controller SimpleUrlHandlerMapping -->
+
+    <!-- xml view resolver -->
+    <bean class="org.springframework.web.servlet.view.XmlViewResolver">
+        <property name="location">
+            <value>/WEB-INF/views.xml</value>
+        </property>
+    </bean>
 </beans>
